@@ -60,13 +60,13 @@ RUN set -x && \
     echo "localhost" >> /etc/ansible/hosts && \
     \
     echo "==> Galaxy install F5 app services..."  && \
-    ansible-galaxy --roles-path=/ansible/roles.galaxy install f5devcentral.f5app_services_package
+    ansible-galaxy --roles-path=/ansible.galaxy install f5devcentral.f5app_services_package
 
 ENV ANSIBLE_GATHERING smart
 ENV ANSIBLE_HOST_KEY_CHECKING false
 ENV ANSIBLE_RETRY_FILES_ENABLED false
-ENV ANSIBLE_CONFIG /ansible/etc/ansible.cfg
-ENV ANSIBLE_ROLES_PATH /ansible/roles:/ansible/roles.galaxy
+ENV ANSIBLE_CONFIG /ansible/ansible.cfg
+ENV ANSIBLE_ROLES_PATH /ansible/roles:/ansible.galaxy
 ENV ANSIBLE_SSH_PIPELINING True
 ENV PYTHONPATH /ansible/lib
 ENV PATH /ansible/bin:$PATH
