@@ -45,8 +45,7 @@ RUN set -x && \
     pip install setuptools==1.4.1 && \
     pip install python-keyczar docker-py && \
     pip install 'ansible[azure]' && \
-    pip install tornado && \
-    pip install --upgrade chardet requests docopt cryptography f5-sdk bigsuds netaddr objectpath isoparser lxml deepdiff git+https://github.com/F5Networks/f5-common-python.git && \
+    pip install --upgrade tornado chardet requests docopt cryptography f5-sdk bigsuds netaddr objectpath isoparser lxml deepdiff git+https://github.com/F5Networks/f5-common-python.git && \
     \
     echo "==> Installing Ansible..."  && \
     pip install ansible==${ANSIBLE_VERSION} && \
