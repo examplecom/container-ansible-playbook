@@ -6,5 +6,7 @@ docker run --rm -it -v ~/.ssh/id_rsa:/root/.ssh/id_rsa -v ~/.ssh/id_rsa.pub:/roo
 
 
 git clone https://github.com/examplecom/container-ansible-playbook.git
+
 sudo docker build -t examplecom/ansible-playbook -f Dockerfile .
+
 sudo docker push examplecom/ansible-playbook
