@@ -60,7 +60,10 @@ RUN set -x && \
     echo "localhost" >> /etc/ansible/hosts && \
     \
     echo "==> Galaxy install F5 app services..."  && \
-    ansible-galaxy --roles-path=/ansible.galaxy install f5devcentral.f5app_services_package
+    ansible-galaxy --roles-path=/ansible.galaxy install f5devcentral.f5app_services_package && \
+    \
+    echo "==> Galaxy install F5 ATC deploy..." && \
+    ansible-galaxy --roles-path=/ansible.galaxy install f5devcentral.atc_deploy
 
 ENV ANSIBLE_GATHERING smart
 ENV ANSIBLE_HOST_KEY_CHECKING false
